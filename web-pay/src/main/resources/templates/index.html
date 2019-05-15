@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+
+<body>
+<h1>index</h1>
+<hr/>
+<form action="127.0.0.1:8888/imageCode/checkCode" method="post">
+    验证码:<input type="text" name="checkCode" />
+    <!--onclick="this.src=this.src+'?temp='+Math.random();"-->
+    <img alt="验证码" id="imagecode"
+         src="/imageCode/getImage" />
+    <a id="codeRefresh" href="javascript:reloadCode();">看不清楚</a><br/>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+<script type="text/javascript">
+    function reloadCode() {
+        debugger
+        document.getElementById("imagecode").setAttribute("src","/imageCode/getImage?temp="+Math.random());
+        //document.getElementById("imagecode").click();
+
+    }
+
+    //    $('#imagecode').click();
+</script>
+</html>
