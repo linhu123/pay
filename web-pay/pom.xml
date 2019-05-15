@@ -11,27 +11,23 @@
         <version>1.5.10.RELEASE</version>
     </parent>
     <groupId>com.linhu</groupId>
-    <artifactId>springStudy</artifactId>
+    <artifactId>web-pay</artifactId>
     <version>1.0-SNAPSHOT</version>
-
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-
         <!--jsp支持-->
         <!-- servlet 依赖. -->
         <dependency>
@@ -53,10 +49,23 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>provided</scope>
         </dependency>
-
-
+        <!-- <dependency>
+		    <groupId>com.alipay</groupId>
+		    <artifactId>sdk-java</artifactId>
+		    <version>20170324180803</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java -->
+		<dependency>
+		    <groupId>com.alipay.sdk</groupId>
+		    <artifactId>alipay-sdk-java</artifactId>
+		    <version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
